@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>כאן התוכן שלך</title>
+    <meta name="description" content="כאן התוכן שלך" />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #22c55e;
+        --border: rgba(255, 255, 255, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: linear-gradient(180deg, #0b1220, var(--bg));
+        color: var(--text);
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(15, 23, 42, 0.7);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 14px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+      }
+
+      .nav a {
+        color: var(--text);
+        text-decoration: none;
+        opacity: 0.9;
+        padding: 8px 10px;
+        border-radius: 10px;
+      }
+
+      .nav a:hover {
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 28px auto 48px;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 18px;
+      }
+
+      .hero {
+        background: radial-gradient(900px 400px at 80% 0%, rgba(34, 197, 94, 0.18), transparent),
+                    radial-gradient(700px 360px at 20% 20%, rgba(59, 130, 246, 0.16), transparent),
+                    var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px;
+        overflow: hidden;
+      }
+
+      .hero h1 { margin: 0 0 6px; font-size: 28px; }
+      .hero p { margin: 0 0 14px; color: var(--muted); }
+
+      .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+      .btn {
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        padding: 10px 12px;
+        border-radius: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn.primary {
+        background: rgba(34, 197, 94, 0.18);
+        border-color: rgba(34, 197, 94, 0.25);
+      }
+
+      .btn:hover { border-color: rgba(255, 255, 255, 0.18); }
+      .btn.primary:hover { border-color: rgba(34, 197, 94, 0.5); }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 16px;
+      }
+
+      .panel h2 { margin: 0 0 10px; font-size: 16px; }
+      .muted { color: var(--muted); }
+
+      .list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .item {
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .item strong { display: block; margin-bottom: 4px; }
+      .item small { color: var(--muted); }
+
+      form { display: grid; gap: 10px; margin-top: 10px; }
+      label { font-weight: 700; font-size: 13px; }
+
+      input, textarea {
+        width: 100%;
+        border-radius: 12px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        outline: none;
+      }
+
+      input:focus, textarea:focus {
+        border-color: rgba(34, 197, 94, 0.45);
+        box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
+      }
+
+      .status {
+        min-height: 20px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      footer {
+        max-width: 980px;
+        margin: 0 auto 28px;
+        padding: 0 20px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 900px) {
+        .container { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav" aria-label="ניווט ראשי">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <span>כאן התוכן שלך</span>
+        </div>
+
+        <div>
+          <a href="#main">כאן התוכן שלך</a>
+          <a href="#updates">כאן התוכן שלך</a>
+          <a href="#contact">כאן התוכן שלך</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="container">
+      <section class="hero" aria-label="כותרת">
+        <h1>כאן התוכן שלך</h1>
+        <p>כאן התוכן שלך</p>
+
+        <div class="actions">
+          <a class="btn primary" href="#contact">כאן התוכן שלך</a>
+          <a class="btn" href="#updates">כאן התוכן שלך</a>
+        </div>
+
+        <div style="height: 14px;"></div>
+
+        <ul class="list" id="updates" aria-label="עדכונים">
+          <li class="item">
+            <strong>כאן התוכן שלך</strong>
+            <small>כאן התוכן שלך</small>
+          </li>
+          <li class="item">
+            <strong>כאן התוכן שלך</strong>
+            <small>כאן התוכן שלך</small>
+          </li>
+          <li class="item">
+            <strong>כאן התוכן שלך</strong>
+            <small>כאן התוכן שלך</small>
+          </li>
+        </ul>
+      </section>
+
+      <aside class="panel" id="contact" aria-label="טופס יצירת קשר">
+        <h2>כאן התוכן שלך</h2>
+        <p class="muted">כאן התוכן שלך</p>
+
+        <form id="contactForm" novalidate>
+          <div>
+            <label for="name">כאן התוכן שלך</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div>
+            <label for="email">כאן התוכן שלך</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div>
+            <label for="message">כאן התוכן שלך</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button class="btn primary" type="submit">כאן התוכן שלך</button>
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+        </form>
+      </aside>
+    </main>
+
+    <footer>
+      כאן התוכן שלך
+    </footer>
+
+    <script>
+      (function () {
+        /** @type {HTMLFormElement | null} */
+        const form = document.getElementById('contactForm');
+        /** @type {HTMLElement | null} */
+        const status = document.getElementById('status');
+
+        if (!form || !status) return;
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const data = new FormData(form);
+          const name = String(data.get('name') || '').trim();
+          const email = String(data.get('email') || '').trim();
+          const message = String(data.get('message') || '').trim();
+
+          if (!name || !email || !message) {
+            status.textContent = 'כאן התוכן שלך';
+            return;
+          }
+
+          // כאן בד"כ שולחים לשרת (fetch). זו דוגמת UI בלבד.
+          status.textContent = 'כאן התוכן שלך';
+          form.reset();
+        });
+      })();
+    </script>
+  </body>
+</html>
